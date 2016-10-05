@@ -46,7 +46,9 @@ public class MultiplexColorSensor {
     static final int STATUS = 0x93;
     static final int CDATAL = 0x94;
 
-    // I2C address for Multiplexer
+    // Default I2C address for multiplexer. The address can be changed to any
+    // value from 0x70 to 0x77, so this line would need to be changed if a
+    // non-default address is to be used.
     static final I2cAddr MUX_ADDRESS = new I2cAddr(0x70);
     private I2cDevice mux;
     private I2cDeviceSynch muxReader;
